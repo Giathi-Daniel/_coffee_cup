@@ -1,0 +1,300 @@
+:root {
+	--bg: #b5371e;
+	--cup: #fff;
+	--milk: #efd4b7;
+	--foam: #b06643;
+	--coffee: #2b1007;
+	--shadow: #4e1911;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--bg);
+}
+
+.art {
+	width: 80vmin;
+	height: 80vmin;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	perspective: 200vmin;
+	transform-style: preserve-3d;
+}
+
+.art * {
+	position: absolute;
+}
+
+.cup {
+	z-index: 1;
+	width: 43.75vmin;
+	height: 44.75vmin;
+	background: 
+		radial-gradient(circle at 90% 92%, #fff0 0 2.25vmin , var(--foam) calc(2.25vmin + 1px) 11vmin, #fff0 0 100%),
+		radial-gradient(circle at 95% 90%, #fff0 0 7vmin , var(--foam) calc(7vmin + 1px) 11vmin, #fff0 0 100%),
+		radial-gradient(circle at 50% 50%, #fff0 15vmin, var(--foam) calc(15vmin + 1px) 16vmin, var(--milk) calc(16vmin + 1px) 18.25vmin, var(--cup) calc(18.25vmin + 1px) 100%), 
+		radial-gradient(circle at 52% 52%, #fff0 15vmin, var(--foam) calc(15vmin + 1px) 17vmin, #fff0 0 100%),
+		radial-gradient(circle at 24% 34%, var(--foam) 7vmin, #fff0 calc(7vmin + 1px) 100%), 
+		radial-gradient(circle at 23% 35%, var(--foam) 7vmin, #fff0 calc(7vmin + 1px) 100%), 
+		radial-gradient(circle at 22% 36%, var(--foam) 7vmin, #fff0 calc(7vmin + 1px) 100%), 
+		radial-gradient(circle at 21.5% 37%, var(--foam) 7vmin, #fff0 calc(7vmin + 1px) 100%);
+	background-color: var(--coffee);
+	margin-top: -2.75vmin;
+	margin-left: 1.5vmin;
+	border-radius: 100%;
+	background-repeat: no-repeat;
+	background-position: 7.5vmin 23vmin, 15vmin 7vmin, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+	background-size: 3vmin 3vmin, 10vmin 9vmin, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+}
+
+.cup:before {
+	content: "";
+	position: absolute;
+	width: 15vmin;
+	height: 6.5vmin;
+	background: linear-gradient(90deg, var(--cup) 5vmin, #fff0 0 100%), radial-gradient(circle at 50% 50%, var(--cup) 6vmin, #fff0 calc(6vmin + 1px) 100%);
+	bottom: 6.75vmin;
+	transform: rotate(30deg);
+	right: -11.5vmin;
+}
+
+.bubbles {
+	width: 26vmin;
+	height: 32vmin;
+	top: 6vmin;
+	left: 5.5vmin;
+	background: #fff0;
+}
+
+.bubbles i {
+	--top: 6vmin;
+	--left: 4.5vmin;
+	--scl: 0.125;
+	width: 5.5vmin;
+	height: 5.5vmin;
+	top: var(--top);
+	left: var(--left);
+	background: var(--coffee);
+	border-radius: 100%;
+	box-sizing: border-box;
+	border-width: 0 0 1px 1px;
+	border-color: #0008 #0008 #fff4 #fff4;
+	border-style: solid;
+	transform: rotate(-45deg) scale(var(--scl));
+	box-shadow: -1px 1px 5px #fff8;
+}
+
+.bubbles i:before, 
+.bubbles i:after {
+	content: "";
+	position: absolute;
+	width: 4.5vmin;
+	height: 4.5vmin;
+	border-radius: 100%;
+	transform: rotate(81deg);
+	left: 0.4vmin;
+	top: 0.5vmin;
+	filter: blur(1px) drop-shadow(0px 2px 0px var(--milk));
+	background: radial-gradient(circle at 58% 180%, #fff0 3vmin, var(--milk) calc(3vmin + 1px));
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: 4vmin 2vmin;
+
+}
+
+.bubbles i:after {
+	width: 2vmin;
+	height: 1vmin;
+	border: 0.25vmin solid var(--milk);
+	border-width: 0.25vmin 0.15vmin 0.5vmin 0.5vmin;
+	transform: rotate(68deg);
+	left: 1.25vmin;
+	top: 0.8vmin;
+	border-color: #fff0 #fff0 #fff0 var(--milk);
+	background: #fff0;
+}
+
+.bubbles i:nth-child(1) {
+	--top: 28.75vmin;
+	--left: 10vmin;
+}
+.bubbles i:nth-child(2) {
+	--scl: 0.15;
+	--top: 27.5vmin;
+	--left: 6.5vmin;
+}
+.bubbles i:nth-child(3) {
+	--scl: 0.135;
+	--top: 27.1vmin;
+	--left: 5.75vmin;
+}
+.bubbles i:nth-child(4) {
+	--top: 17.5vmin;
+	--left: -0.75vmin;
+}
+.bubbles i:nth-child(5) {
+	--scl: 0.25;
+	--top: 16.35vmin;
+	--left: -1.15vmin;
+}
+.bubbles i:nth-child(6) {
+	--top: 14.85vmin;
+	--left: -1vmin;
+}
+.bubbles i:nth-child(7) {
+	--scl: 0.165;
+	--top: 14.65vmin;
+	--left: 0.35vmin;
+}
+.bubbles i:nth-child(8) {
+	--top: 14.2vmin;
+	--left: 1.55vmin;
+}
+.bubbles i:nth-child(9) {
+	--scl: 0.175;
+	--top: 14.1vmin;
+	--left: -1.7vmin;
+}
+.bubbles i:nth-child(10) {
+	--scl: 0.2;
+	--top: 13.35vmin;
+	--left: 3.5vmin;
+}
+.bubbles i:nth-child(11) {
+	--scl: 0.5;
+	--top: 12.5vmin;
+	--left: 0.5vmin;
+}
+.bubbles i:nth-child(12) {
+	--top: 11.25vmin;
+	--left: -1vmin;
+}
+.bubbles i:nth-child(13) {
+	--scl: 0.25;
+	--top: 10vmin;
+	--left: -1vmin;
+}
+.bubbles i:nth-child(14) {
+	--scl: 0.225;
+	--top: 8.8vmin;
+	--left: 0.5vmin;
+}
+.bubbles i:nth-child(15) {
+	--scl: 0.35;
+	--top: 10.4vmin;
+	--left: 4.35vmin;
+}
+.bubbles i:nth-child(16) {
+	--scl: 0.25;
+	--top: 8.75vmin;
+	--left: 7.5vmin;
+}
+.bubbles i:nth-child(17) {
+	--scl: 1;
+	--top: 5.95vmin;
+	--left: 4.5vmin;
+}
+.bubbles i:nth-child(18) {
+	--top: 5.95vmin;
+	--left: 8.5vmin;
+}
+.bubbles i:nth-child(19) {
+	--scl: 0.4;
+	--top: 1vmin;
+	--left: 8.5vmin;
+}
+.bubbles i:nth-child(20) {
+	--scl: 0.175;
+	--top: 1vmin;
+	--left: 5.5vmin;
+}
+.bubbles i:nth-child(21) {
+	--top: 0.1vmin;
+	--left: 6.5vmin;
+}
+.bubbles i:nth-child(22) {
+	--top: -1vmin;
+	--left: 9.25vmin;
+}
+.bubbles i:nth-child(23) {
+	--scl: 0.185;
+	--top: -0.5vmin;
+	--left: 11.25vmin;
+}
+.bubbles i:nth-child(24) {
+	--top: -1.5vmin;
+	--left: 12.25vmin;
+}
+.bubbles i:nth-child(25) {
+	--scl: 0.285;
+	--top: -1.35vmin;
+	--left: 14.25vmin;
+}
+.bubbles i:nth-child(26) {
+	--top: -1.45vmin;
+	--left: 15.5vmin;
+}
+.bubbles i:nth-child(27) {
+	--scl: 0.15;
+	--top: -1vmin;
+	--left: 16.35vmin;
+}
+.bubbles i:nth-child(28) {
+	--top: -0.1vmin;
+	--left: 19.75vmin;
+}
+.bubbles i:nth-child(29) {
+	--scl: 0.185;
+	--top: 0.1vmin;
+	--left: 20.85vmin;
+}
+.bubbles i:nth-child(30) {
+	--top: 0.75vmin;
+	--left: 22.65vmin;
+}
+
+
+
+.shadow {
+	background: var(--shadow);
+	width: 48vmin;
+	height: 55vmin;
+	border-radius: 0% 0% 100% 100%;
+	bottom: 5vmin;
+	left: -2vmin;
+	transform: rotate(30deg) rotateX(40deg);
+	z-index: 0;
+	transform-style: preserve-3d;
+	transform-origin: 50% 100%;
+}
+
+.shadow:before {
+	content: "";
+	position: absolute;
+	width: 11vmin;
+	height: 21vmin;
+	border: 5vmin solid var(--shadow);
+	left: 38vmin;
+	top: 3vmin;
+	border-radius: 100%;
+	border-top-width: 4.5vmin;
+	border-bottom-width: 5vmin;
+}
+
+.inner-shadow {
+	width: 36.5vmin;
+	height: 36.5vmin;
+	background: radial-gradient(circle at 36% 88%, #fff0 21.5vmin, #0004 calc(21.5vmin + 1px));
+	left: 3.5vmin;
+	top: 4vmin;
+	border-radius: 100%;
+}
