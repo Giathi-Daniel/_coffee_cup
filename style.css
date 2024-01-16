@@ -262,34 +262,6 @@ body {
 	--left: 22.65vmin;
 }
 
-
-
-.shadow {
-	background: var(--shadow);
-	width: 48vmin;
-	height: 55vmin;
-	border-radius: 0% 0% 100% 100%;
-	bottom: 5vmin;
-	left: -2vmin;
-	transform: rotate(30deg) rotateX(40deg);
-	z-index: 0;
-	transform-style: preserve-3d;
-	transform-origin: 50% 100%;
-}
-
-.shadow:before {
-	content: "";
-	position: absolute;
-	width: 11vmin;
-	height: 21vmin;
-	border: 5vmin solid var(--shadow);
-	left: 38vmin;
-	top: 3vmin;
-	border-radius: 100%;
-	border-top-width: 4.5vmin;
-	border-bottom-width: 5vmin;
-}
-
 .inner-shadow {
 	width: 36.5vmin;
 	height: 36.5vmin;
